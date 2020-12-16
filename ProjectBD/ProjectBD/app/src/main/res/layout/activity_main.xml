@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity" >
+    <TextView
+        android:id="@+id/headingLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="47dp"
+        android:layout_marginLeft="47dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginRight="47dp"
+        android:padding="20dp"
+        android:gravity="center"
+        android:text="Аутентификация по отпечатку пальца"
+        android:textColor="@color/Hello"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/fingerprintImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/fingerprintImage"
+        android:layout_width="190dp"
+        android:layout_height="194dp"
+        android:layout_below="@+id/headingLabel"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fingerprint" />
+
+    <TextView
+        android:id="@+id/paraLabel"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/fingerprintImage"
+        android:layout_marginTop="48dp"
+        android:text=""
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@+id/fingerprintImage"
+        app:layout_constraintStart_toStartOf="@+id/fingerprintImage"
+        app:layout_constraintTop_toBottomOf="@+id/fingerprintImage" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/rounded_button"
+        android:onClick="start_onClick"
+        android:text="Добро пожаловать"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paraLabel" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
